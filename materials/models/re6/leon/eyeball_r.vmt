@@ -1,0 +1,9 @@
+"vertexlitgeneric"
+{
+	"$baseTexture"               "models/re6/leon/cra0s_sexy_eye" 		  // Iris color in RGB with cornea noise in A
+
+	
+
+}
+// Eyerefract SDK_EyeRefract 2007 shader used in the popular Tf2 and l4d games
+// Advance params by Cra0kalo

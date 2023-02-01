@@ -1,0 +1,165 @@
+"VertexlitGeneric"
+{
+// VertexlitGeneric shader params Source2004-2013
+// Supported Ver. HL2OB ASW L4D2 CSGO SFM
+// Written by Cra0kalo
+// http://cra0kalo.com
+
+//**Input Types**
+// texture_file - texture file (binary) (eg. Path to file "basetexture.vtf")
+// int - whole number
+// boolean - True or false; on or off
+// vector/array - Can hold multiple values. Can be declared in many ways. Example: 3xFloat[1.0 0.5 2.0] (Usually just used for RGB values).
+
+
+
+// 	Base diffuse texture
+	"$basetexture" "models/re6/leon/pl0000_00shats_BM"
+	
+// 	Compression wrinklemap diffuse 
+	//"$compress"	"models/cra0kalo/basetexture"
+
+// 	Expansion wrinklemap diffuse 
+	//"$stretch"	"models/cra0kalo/basetexture"
+	
+	// ------------------------------------
+	// Bump Map and normal maps
+	// ------------------------------------
+	
+// 	Bump map
+	"$bumpframe"	"0"
+// Bump map has the specular map in the alpha channel
+	"$normalmapalphaenvmapmask" 1	
+	
+//	Compression wrinklemap
+	//"$bumpcompress""models/cra0kalo/basetexture"	
+	
+// 	Expansion wrinklemap
+	//"$bumpstretch"	"models/cra0kalo/basetexture"
+		
+	// ------------------------------------
+	// Specular lighting and reflections
+	// ------------------------------------
+
+// 	Reflection cubemap (CAPCOM SHADER) (NOT USED CAUSE WE USE PHONG THIS TIME)
+
+		
+	
+	// ------------------------------------
+	// Phong
+	// ------------------------------------	
+// Phong enabled?
+	"$phong" "1"
+	
+// Phong exponent for local specular lights	
+	"$phongexponent" "1"
+	
+// Phong tint for local specular lights
+	"$phongtint"	"[.85 .85 1]"
+	
+// Apply tint by albedo (controlled by spec exponent texture)
+	"$phongalbedotint"	"1"
+	
+// Warp the specular term
+	//"$phongwarptexture"	"models/cra0kalo/basetexture"	
+	
+// Parameters for remapping fresnel output
+	"$phongfresnelranges" "[.5 .85 30]"
+	
+// Phong overbrightening factor (specular mask channel should be authored to account for this)	
+	"$phongboost"	"0.03"
+	
+// Phong albedo overbrightening factor (specular mask channel should be authored to account for this
+	"$phongalbedoboost"	"1"	
+
+// Forces Phong lighting, even at low GPU levels (Phong must already be enabled)
+	"$forcephong"	"1"
+	
+// Phong Exponent map
+	//"$phongexponenttexture" "models/cra0kalo/basetexture"
+		
+// Invert the phong mask (0=full phong, 1=no phong)
+	"$invertphongmask"	"0"
+	
+	
+// This is to allow phong materials to disable half lambert. Half lambert has always been forced on in phong,
+// so the only safe way to allow artists to disable half lambert is to create this param that disables the
+// default behavior of forcing half lambert on.
+	"$phongdisablehalflambert"	"0"	//boolean
+	
+	// ------------------------------------
+	// Rim lighting 
+	// ------------------------------------		
+// Rim enabled?
+	"$rimlight" "1"	
+	
+// Exponent for rim lights	
+	"$rimlightexponent" "50" 
+
+// Boost for rim lights
+	"$rimlightboost" "0.1" 
+	
+// Indicates whether or not to use alpha channel of exponent texture to mask the rim term
+	//"$rimmask" "1" 
+	
+	
+		// ------------------------------------
+	// Detail map
+	// ------------------------------------			
+// Detail texture
+	"$detail" "models/re6/leon/pl0000_00Detail_DM"
+	"$detailframe" "0"	
+
+// Scale of the detail texture
+	"$detailscale" "30.283"		
+	
+// Mode for combining detail texture with base. 0=normal, 1= additive, 2=alpha blend detail over base, 3=crossfade
+	"$detailblendmode" "0"
+	
+// Blend amount for detail texture	
+	"$detailblendfactor" ".87"
+	
+// Detail texture tint
+	"$detailtint" "[1 1 1]"
+
+// $detail texcoord transform
+	"$detailtexturetransform"	"center .5 .5 scale 1 1 rotate 0 translate 0 0"
+	
+	
+	
+	
+	
+	// ------------------------------------
+	// Other misc
+	// ------------------------------------		
+	
+// Amount of screen space ambient occlusion to use (0..1 range)
+	"$ambientocclusion" "1"	
+	
+// Halflambert - Illuminates further around the model to prevent it loosing definition with surrounding enviroment. NOTE: Conflicts with "$lightwarptexture".
+	"$halflambert" "1"
+	
+// Lightwarp texture (1D ramp texture for tinting scalar diffuse term) NOTE: Conflicts with "$halflambert".
+	//"$lightwarptexture" "models/cra0kalo/slime/slime_illu"
+
+
+	
+// 	Alpha test reference -controls the 'fuzziness' of the transparency masking Using lower values like .01 will result in a more blurred and fuzzy edge
+//Using lower values like .01 will result in a more blurred and fuzzy edge while a value of .99 will be extremely sharp.
+	//"$alphatestreference"	"0.0"
+	
+
+	
+// Allow per-instance color modulation	
+	"$allowdiffusemodulation"	"1"
+	
+
+
+	// Model options
+	"$model" 1 
+	"$nodecal" 1
+	"$nolod" 1		  //Does what it says disables level of detail minmaps
+	// ------------------------------
+	// End of commands 
+}
+

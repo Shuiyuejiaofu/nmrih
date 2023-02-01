@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/re6/leon/pl0000_00eyelash_BM"
+	
+	$translucent 1
+}

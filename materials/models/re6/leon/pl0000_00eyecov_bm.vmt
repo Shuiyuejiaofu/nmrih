@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/re6/leon/pl0000_00eyeCov_BM"
+		// Model options
+	"$model" 1 
+	"$nodecal" 1
+	$alphatest 1
+}

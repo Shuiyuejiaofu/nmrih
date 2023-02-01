@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/re6/leon/pl0000_00_earLight_BM"
+
+	"$phong"	"1"
+	"$phongboost"	"0.15"
+	"$phongtint"	"[.85 .85 1]"
+	"$phongfresnelranges"	"[.5 .85 30]"
+	$rimlight	1
+	$rimlightexponent	50
+	$rimlightboost	0.1
+	
+	
+		"$nodecal" 1
+}

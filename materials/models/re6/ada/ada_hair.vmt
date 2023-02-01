@@ -1,0 +1,38 @@
+vertexlitgeneric
+{
+	"$basetexture" "Models\re6\Ada/pl0600_03hair_BM"
+
+	"$alphatestreference" "0.15"
+	"$alphatest" 1
+	$allowalphatocoverage 1
+	"$nocull" 1
+
+"$phongexponenttexture" "Models\re6\Ada/Hair_SM"
+
+ 	"$phong" "1"
+	"$phongexponent" "8"
+	"$phongboost"	"3"
+	"$phongfresnelranges"	"[0.05 0.5 1]"
+	"$phongalbedotint" "1"
+
+"$rimlight" "1" 
+"$rimlightexponent" "0.5" 
+"$rimlightboost" "3.5" 
+"$rimmask" 1
+
+vertexlitgeneric_dx8
+{
+$envmaptint "[.05 .03 .01]"
+$envmap env_cubemap
+	$envmapmask "Models\re6\Ada/hair_SM"
+}
+vertexlitgeneric_HDR_dx8
+{
+$envmaptint "[.22 .12 .07]"
+$envmap env_cubemap
+	$envmapmask "Models\re6\Ada/Hair_SM"
+}
+$halflambert 1
+$phong 0
+"GPU>=2?$phong" 1
+}
